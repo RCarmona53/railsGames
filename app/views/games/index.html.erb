@@ -1,0 +1,38 @@
+
+<% if user_signed_in? %>
+<table class="table table-striped table table-dark table-borderless">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Rating</th>
+      <th>Review</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+    <% @games.each do |game| %>
+      <% if game.user == current_user %>
+      <tr>
+        <td><%= link_to game.Name, game %></td>
+        <td><%= game.description %></td>
+        <td><%= game.rating %></td>
+        <td><%= game.review %></td>
+        <td><%= game.release_date %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path, class:"btn btn-success" %>
+
+<% else %>
+
+<h1>Games</h1>
+<h3>This is my first Ruby webpage pa </h3>
+
+  <% end %>

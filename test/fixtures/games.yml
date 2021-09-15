@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  description: MyString
+  rating: 1
+  review: MyString
+  release_date: 2021-09-01 18:42:02
+
+two:
+  Name: MyString
+  description: MyString
+  rating: 1
+  review: MyString
+  release_date: 2021-09-01 18:42:02
